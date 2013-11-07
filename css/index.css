@@ -1,0 +1,30 @@
+.show_area{
+    width:800px;
+    height:600px;
+    position:absolute;
+    padding:10px;
+
+}
+.sa-rant{
+    float:left;
+    width:188px;
+    height:188px;
+    padding:5px;
+    border: 1px solid #c0c0c0;
+}
+l.sa-rant-img{
+    border:1px solid #c0c0c0;
+    width:150px;
+    height:150px;
+
+}
+.sa-rant-img{
+    position:absolute;
+    margin-left:18px;
+}
+p.label{
+    position:relative;
+    top:145px;
+    text-align:center;
+    width:188px;
+}
