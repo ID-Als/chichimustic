@@ -13,7 +13,7 @@
     border: 1px solid #c0c0c0;
 }
 l.sa-rant-img{
-    border:1px solid #c0c0c0;
+    border:1px 1px 1px 0 solid #c0c0c0;
     width:150px;
     height:150px;
 
@@ -21,6 +21,9 @@ l.sa-rant-img{
 .sa-rant-img{
     position:absolute;
     margin-left:18px;
+}
+.sa-rant-img[x_index="1"]{
+    border-left:1px solid #c0c0c0;
 }
 p.label{
     position:relative;
