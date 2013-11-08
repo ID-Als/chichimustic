@@ -1,0 +1,27 @@
+<!--<script type="javascript">
+    $(function(){
+    var rant_list=[{name:"chuancai",dis_name:"一品川菜"},{name:"haipai",dis_name:"海派食府"},{name:"nimei",dis_name:"你妹"}]
+    for(var i= 0;i<rant_list.length;i++){
+        var ss=rant_list[i];
+        ss.rant_url="load/"+ss.name+"/food.html";
+        var str="<g class='sa-rant'><l class='sa-rant-img'></l><p class='label' href="+ss.rant_url+">"+ss.dis_name+"</p></g>";
+        $("#show_area").append(str);
+    }
+    $("p.label").each(function(){
+        $(this).click(function(event){
+            $("#show_area").load($(event.target).attr("href"),function(responseTxt,statusTxt,xhr){
+                var a=$("#show_area");
+                if(statusTxt=="success"){a.innerHTML=statusTxt;}
+                else {a.innerHTML=xhr.status+": "+xhr.statusText;}
+    })})})
+
+})
+</script>-->
+<g class="sa-rant">
+    <l class="sa-rant-img"></l>
+    <p class="label" href="load/yican/food1.html">food1</p>
+</g>
+<g class="sa-rant">
+    <l class="sa-rant-img"></l>
+    <p class="label" href="load/yican/food1.html">food1</p>
+</g>

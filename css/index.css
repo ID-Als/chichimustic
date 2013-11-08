@@ -32,4 +32,6 @@ p.label{
     color:#c0c0c0;
     text-align:center;
     width:174px;
+    text-decoration: snow;
+    cursor:pointer;
 }
