@@ -1,6 +1,7 @@
 $(document).ready(function(){
-    var xxx=$("div.showarea").children();
-    xxx.each(function(i,ss){
+    rant_list=[{name:"yican",dis_name:"一餐"}{name:"ercan",dis_name:"二餐"},{name:"sancan",dis_name:"三餐"}]
+
+    rant_list.each(function(i,ss){
         $(ss).click(function(){
             $(".showarea").load("sa-rant.html",function(responseTxt,statusTxt,xhr){
                 var a=$(".show_area");
