@@ -24,20 +24,32 @@
         <![endif]-->
 
 
-        <div class="show_area" ng-app>
+        <!--<div class="show_area" ng-app="saApp" ng-controller="saCtrl">
             <px>{{current_anchor}}</px>
-            <ng-repeat>
+            <div ="rant in rants" >
                 <g class="sa-rant">
                 <l class="sa-rant-img"></l>
-                <p class="label">一品川菜</p>
+                <a class="label" id="{{rant.name}}" href='' ng-click="httpget()">{{rant.dis_name}}</a>
+                </g>
+            </div>
+
+        </div>-->
+        <div class="show_area">
+            <g class="sa-rant">
+                <l class="sa-rant-img"></l>
+                <p class="label" href="load/sa-rant.html">yican</p>
             </g>
-            </ng-repeat>
+            <g class="sa-rant">
+                <l class="sa-rant-img"></l>
+                <p class="label" href="load/ercan.html">ercan</p>
+            </g>
         </div>
 
 
 
-
-
+        <script src="js/vendor/angular.min.js"></script>
+        <!--<script src="js/vendor/angular-cookies.min.js"></script>
+        <script src="js/vendor/angular-resource.min.js"></script>-->
         <script src="js/vendor/jquery-1.10.2.min.js"></script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
