@@ -51,78 +51,7 @@ $(document).ready(function(){
     loadx("load/rant.html",$("#show_area"))
 })
 
-    /*$("#show_area").load("load/rant.html",function(){
-        navlink.append("<span class='sa-nav-link'>>"+"餐厅列表"+"</span>")
 
-        $(".sa-rant").each(function(){$(this).click(function(event){
-        if($(event.target).attr("class")=="sa-rant-img")var ss=$(event.target).next();
-        if($(event.target).attr("class")=="sa-rant")var ss=$(event.target).find("p.label");
-        if($(event.target).attr("class")=="label") var ss=$(event.target);
-
-        $("#show_area").load(ss.attr("href"),function(){
-            navlink.append("<span class='sa-nav-link'>>"+ss.text()+"</span>")
-
-            $(".sa-food").each(function(){$(this).click(function(event){
-            if($(event.target).attr("class")=="sa-food-img")var ss=$(event.target).next();
-            if($(event.target).attr("class")=="sa-food")var ss=$(event.target).find("p.label");
-            if($(event.target).attr("class")=="label") var ss=$(event.target);
-            $("#show_area").load($(ss).attr("href"),function(responseTxt,statusTXT,xhr){
-                if(statusTXT=="success"){navlink.append("<span class='sa-nav-link'>>"+ss.text()+"</span>")}
-
-            });
-        })})})
-    })})})
-*/
-
-
-/*罗拉快跑*/
-
-
-
-
-/*$(document).ready(function(){
-    var rant_list=[{name:"yican",dis_name:"一餐"},{name:"ercan",dis_name:"二餐"},{name:"sancan",dis_name:"三餐"}]
-
-    for(var i= 0;i<rant_list.length;i++){
-        var ss=rant_list[i];
-        ss.rant_url="load/"+ss.name+"/food.json";
-        var str="<g class='sa-rant'><l class='sa-rant-img'></l><p class='label' href="+ss.rant_url+">"+ss.dis_name+"</p></g>";
-        $("#show_area").append(str);
-    }
-    $("p.label").each(function(){
-        $(this).click(function(event){
-            $("#show_area").load($(event.target).attr("href"),function(responseTxt,statusTxt,xhr){
-                var a=$("#show_area");
-                if(statusTxt=="success"){a.innerHTML=statusTxt;}
-                else {a.innerHTML=xhr.status+": "+xhr.statusText;}
-    })})})
-
-})*/
-
-/*xxx[i].click(function(){
-            $(".show_area").load("load/food.html",function(responseTxt,statusTxt,xhr){
-            if(statusTxt=="success"){
-                var a=$(".show_area");
-                a.innerHTML=statusTxt;
-            }
-            else {
-                var txt=xhr.status+": "+xhr.statusText;
-                a.innerHTML=txt;
-            }
-        })
-        })*/
-/*$(".sa-rant").click(function(){
-        $(".show_area").load("load/food.html",function(responseTxt,statusTxt,xhr){
-            if(statusTxt=="success"){
-                var a=$(".show_area");
-                a.innerHTML=statusTxt;
-            }
-            else {
-                var txt=xhr.status+": "+xhr.statusText;
-                a.innerHTML=txt;
-            }
-        })
-    })*/
 /*var saApp=angular.module("saApp",[])
 
 saApp.controller('saCtrl', ['$scope', function ($scope) {
