@@ -1,13 +1,17 @@
 g{
     display: block;
 }
-.show_area{
+#show_area_wrapper{
     width:800px;
     height:600px;
     position:absolute;
-    padding:10px;
+    padding:20px 10px 10px 10px;
     border:1px solid #000;
-
+}
+#show_area{
+    width:800px;
+    height:600px;
+    position:relative;
 }
 .sa-rant{
     float:left;
@@ -16,10 +20,14 @@ g{
     border: 1px solid #c0c0c0;
     margin:12px;
 }
+.sa-rant:hover{
+    background:#f0f0f0;
+}
 l.sa-rant-img{
     border:1px solid #c0c0c0;
     width:130px;
     height:130px;
+    background:#fff;
 }
 .sa-rant-img{
     position:absolute;
@@ -34,4 +42,40 @@ p.label{
     width:174px;
     text-decoration: snow;
     cursor:pointer;
+}
+.sa-food{
+    float:left;
+    width:174px;
+    height:174px;
+    border: 1px solid #c0c0c0;
+    margin:12px;
+}
+l.sa-food-img{
+    border:1px solid #c0c0c0;
+    width:130px;
+    height:130px;
+}
+.sa-food-img{
+    position:absolute;
+    margin:10px 21px 21px 21px;
+}
+.sa-nav{
+    position:absolute;
+    top:3px;
+    left:30px;
+    font-size:24px;
+    line-height:24px;
+}
+.sa-nav.sa-nav-link{
+    text-decoration:underline;
+    color:#222222;
+}
+.buffer-img{
+    width:50px;
+    height:50px;
+    position:absolute;
+    top:420px;
+    left:310px;
+    background:#105cb6;
+    display:none;
 }
