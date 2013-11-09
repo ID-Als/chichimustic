@@ -1,57 +1,38 @@
 $(document).ready(function(){
     var ajaxstate="normal";
-    var navlink=$(".sa-nav");
-    var used_list=Array();
-    navlink.update=function(urlx){
-        var strs="";
-        for(var i= 0;i<used_list.length;i++){
-            strs+="<span class='annoymous'>></span>"+"<a style='text-decoration:none;color:#b3d4fc;'>"+ used_list[i]+'</a>'
-        }
-        navlink.html(strs);
-    }
-
-
-
-
-
-
     function buffering(){
         if(ajaxstate!="normal"){
             $("#show_area").fadeOut(100,function(){
-                $("buffer-img").css("display","block")
-            })
+                $(".buffer-img").css("display","block")})
         }
-        else{$("buffer-img").css("display","none")}
+        else{$(".buffer-img").css("display","none")}
     }
-    setInterval(buffering,1000);
+    setInterval(buffering,500);
     function loadx(urlx,elm){
         $("#show_area").load(urlx,function(responseTxt,statusTXT){
             if(statusTXT=="success"){
-
-
-
-                if(elm.attr("alt"))var xx=elm.attr("alt");
-                else var xx=elm.text();
-                alert(xx);
-                concat(used_list,(xx));//图片的文字为alt属性，《p》即文字。
-                alert(elm.attr("alt"));
-                alert(used_list[0].name)
-                navlink.update(urlx);
-
-
-
                 ajaxstate="normal";
-                $(".sa-bind-click").each(function(i,ss){//在图片和文字说明上添加class“sa-bind-click”，可以从此绑定handler；
-                    $(ss).bind("click",function(){loadx($(ss).attr("href"));});
-                })
+                $(".sa-bind-click").each(function(i,ss){//添加class“sa-bind-click”，可以从此绑定handler；
+                    $(ss).bind("click",function(){loadx($(ss).attr("href"),$(ss));});})
             }
-            else {ajaxstate="abnormal";}
-        })
+            else {ajaxstate="abnormal";}})
     }
     loadx("load/rant.html",$("#show_area"))
 })
 
+//navlink.update(elm);
+/*var navlink=$(".sa-nav");
+    var used_list=[];
+    navlink.update=function(elm){
+        var strs="";
+        used_list.push({load:"餐厅列表"});
 
+        for(var i= 0;i<used_list.length;i++){
+            strs+="<span class='anonymous sa-bind-click'>></span>"+"<a style='text-decoration:none;color:#b3d4fc;' href="
+                +elm.attr('href')+">"+elm.text()+'</a>'
+        }
+        navlink.html(strs);
+    }*/
 /*var saApp=angular.module("saApp",[])
 
 saApp.controller('saCtrl', ['$scope', function ($scope) {
