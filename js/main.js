@@ -1,5 +1,8 @@
 $(document).ready(function(){
     var ajaxstate="normal";
+    function urlparser(urlx){
+
+    }
     function buffering(){
         if(ajaxstate!="normal"){
             $("#show_area").fadeOut(100,function(){
